@@ -1,0 +1,134 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Container */
+.container {
+  background: #282626;
+  width: 100%;
+  max-width: 500px;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Heading */
+.container h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Input row */
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-container input[type="text"] {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-container input[type="text"]:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  outline: none;
+}
+
+.input-container button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.08s ease;
+}
+
+.input-container button:hover {
+  background: #4338ca;
+}
+
+.input-container button:active {
+  transform: translateY(1px);
+}
+
+/* Todo list styles */
+#todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Each todo item */
+#todo-list li {
+  background: #f9fafb;
+  padding: 12px 14px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  transition: background 0.2s ease;
+}
+
+#todo-list li:hover {
+  background: #f3f4f6;
+}
+
+/* Text of todo */
+#todo-list li .task-text {
+  flex: 1;
+  color: #111827;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+/* Delete button */
+#todo-list li button {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin-left: 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.08s ease;
+}
+
+#todo-list li button:hover {
+  background: #dc2626;
+}
+
+#todo-list li button:active {
+  transform: translateY(1px);
+}
+
+/* Completed state (optional) */
+.completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
